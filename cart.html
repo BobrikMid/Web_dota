@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кошик - 12 Tango</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function saveSteamLink() {
+            const steamLink = document.getElementById("steamLink").value;
+            if (steamLink) {
+                alert("Успішно збережено!");
+            } else {
+                alert("Будь ласка, введіть посилання на Steam.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Хедер і меню навігації -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="12 Tango">
+            <span class="site-name">12 Tango</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Dota 2</a></li>
+                <li><a href="about.html">Про нас</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="cart.html"><img src="images/cart-icon.png" alt="Кошик"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Основний контент сторінки кошика -->
+    <div class="main-content">
+        <h1>Ваш кошик</h1>
+
+        <!-- Таблиця з товарами в кошику -->
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Назва предмету</th>
+                    <th>Ціна</th>
+                    <th>Кількість</th>
+                    <th>Дії</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Shadow fiend coil</td>
+                    <td>150$</td>
+                    <td>
+                        <button>-</button>
+                        <input type="number" value="1" min="1" style="width: 50px;">
+                        <button>+</button>
+                    </td>
+                    <td><button>Видалити</button></td>
+                </tr>
+                <tr>
+                    <td>Magnus apex</td>
+                    <td>150$</td>
+                    <td>
+                        <button>-</button>
+                        <input type="number" value="1" min="1" style="width: 50px;">
+                        <button>+</button>
+                    </td>
+                    <td><button>Видалити</button></td>
+                </tr>
+                <tr>
+                    <td>Pudge persona</td>
+                    <td>150$</td>
+                    <td>
+                        <button>-</button>
+                        <input type="number" value="1" min="1" style="width: 50px;">
+                        <button>+</button>
+                    </td>
+                    <td><button>Видалити</button></td>
+                </tr>
+                <!-- Додайте більше предметів тут, якщо потрібно -->
+            </tbody>
+        </table>
+
+        <div class="total">
+            <p>Сума: 450$</p>
+            <button class="checkout-btn">Оформити замовлення</button>
+        </div>
+
+        <!-- Поле для введення посилання на Steam -->
+        <div class="steam-link-section">
+            <label for="steamLink">Введіть ваше посилання на Steam:</label>
+            <input type="text" id="steamLink" placeholder="https://steamcommunity.com/tradeoffer/new/?partner=XXXXX">
+            <button onclick="saveSteamLink()">Зберегти</button>
+        </div>
+    </div>
+
+    <!-- Футер -->
+    <footer>
+        <p>&copy; 2024 12 Tango. Всі права захищені.</p>
+    </footer>
+</body>
+</html>
